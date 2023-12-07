@@ -13,11 +13,19 @@ example = """
 .664.598..
 """
 
-# data = list(filter(None, example.splitlines()))
+# example = """
+# 196..132.......@.............*...../...481.-822...............535....378...............203.......541.............644-..111.890.......@......
+# ....*.....926........%413.686......512...............722.............*.......................231....*.648*940........................747....
+# ....872..........749............/.............930...*.....498.....784.....892...................*.190.........625.=90..115...............277
+# ........236..604*......890*981..401............*....981...*........................635*634...901..............*.........................*...
+# .......*...............................310......552.....893..........146...930.............................44.635.129...54...........751....
+# """
 
-with open("input.txt", "r") as file:
-    data = file.read()
-data = list(filter(None, data.splitlines()))
+data = list(filter(None, example.splitlines()))
+
+# with open("input.txt", "r") as file:
+#     data = file.read()
+# data = list(filter(None, data.splitlines()))
 
 # generate tuples of row to check plus row above and below
 row_above_below = []
@@ -90,4 +98,5 @@ for row_cluster in row_above_below:
                 part_numbers.append(int(num))
 
 print("PART 1 SOLUTION: ", sum(part_numbers))
+# print("part numbers", part_numbers)
 
